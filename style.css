@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #080808;
+    color: #fff;
+}
+#header {
+    width: 100%;
+    height: 120vh;
+    background-image: url(images/mjy15.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.logo {
+    width: 140px
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;  
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-content {
+    font-size: 30px;
+    margin-top: 5%;
+}
+.header-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.header-content h1 span{
+    color: #ff004f;
+    text-transform: uppercase;
+}
+.welcome-message {
+    margin-top: 30px;
+    margin-right:600px;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.0rem;
+    color: #fff;
+    background: rgba(8, 8, 8, 0.7);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ffffff44;
+    animation: fadeInSlide 2s cubic-bezier(.68,-0.55,.27,1.55) forwards, glow 2s infinite alternate;
+    opacity: 0;
+}
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+        box-shadow: 0 0 0 #ff004f00;
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 0 30px #f9f9f944;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        box-shadow: 0 0 20px #ffffff44;
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px #ffffff44;
+    }
+    100% {
+        box-shadow: 0 0 40px #ffffff99;
+    }
+}
+/* Add top and bottom border to sections */
+section {
+  position: relative;
+  padding: 10px;
+  margin-top: 5px;
+  background: #000000;
+  border-top: 4px solid #2b2d42;
+  border-bottom: 4px solid #2b2d42;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover effect: change border color */
+section:hover {
+  border-top-color: #ef233c;
+  border-bottom-color: #ef233c;
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Click animation */
+section:active {
+  transform: scale(0.99);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ffffff;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+td {
+  background-color: #000000;
+}
+
+/* List Styling */
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+/* Ensure headings align with other sections */
+.about-col-2 h1 {
+    margin-top: 0;
+    margin-left: 0;
+}
+.about-col-2 {
+    margin-top: 30px; /* Adds space above the About Me content */
+    margin-left: 50px; /* Aligns with the image */
+    margin-right: 50px; /* Adds space to the right */
+    text-align: center; /* Centers the text */
+    padding: 20px; /* Adds padding around the content */
+    line-height: 1.6; /* Improves readability */
+}
+.about-col-3 img {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skills-col-2 h2 {
+    margin-top: 0;
+    margin-left: 0;
+}
+.skills-col-2 {
+    margin-top: 5px; /* Adds space above the About Me content */
+    margin-left: 0px; /* Aligns with the image */
+    margin-right: 0px; /* Adds space to the right */
+    text-align: left; /* Centers the text */
+    padding: 0px; /* Adds padding around the content */
+    line-height: 1.6; /* Improves readability */
+}
+.interests-col-2 h2 {
+    margin-top: 0;
+    margin-left: 0;
+}
+.interests-col-2 {
+    margin-top: 5px; /* Adds space above the Interests content */
+    margin-left: 0px; /* Aligns with the image */
+    margin-right: 0px; /* Adds space to the right */
+    text-align: left; /* Centers the text */
+    padding: 0px; /* Adds padding around the content */
+    line-height: 1.6; /* Improves readability */
+}
+.projects-col-2 h2 {
+    margin-top: 0;
+    margin-left: 0;
+}
+.projects-col-2 {
+    margin-top: 5px; /* Adds space above the Projects content */
+    margin-left: 0px; /* Aligns with the image */
+    margin-right: 0px; /* Adds space to the right */
+    text-align: left; /* Centers the text */
+    padding: 0px; /* Adds padding around the content */
+    line-height: 1.6; /* Improves readability */
+}
+/* Contact Section */
+#contact {
+  background: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}       
+
+.contact-col-2 h2 {
+    margin-top: 0;
+    margin-left: 0;
+}
+.contact-col-2 {
+    margin-top: 5px; /* Adds space above the About Me content */
+    margin-left: 0px; /* Aligns with the image */
+    margin-right: 0px; /* Adds space to the right */
+    text-align: center; /* Centers the text */
+    padding: 0px; /* Adds padding around the content */
+    line-height: 1.6; /* Improves readability */
+}
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: #000000;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+footer a {
+  color: #ef233c;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
